@@ -12,7 +12,7 @@ import CameraFeeds from "./pages/CameraFeeds"
 import Alerts from "./pages/Alerts"
 import Reports from "./pages/Reports"
 import Settings from "./pages/Settings"
-
+import LiveFeed from "./pages/LiveFeed"
 function App() {
   return (
     <div className="d-flex">
@@ -25,6 +25,8 @@ function App() {
           <Route path="/traffic-alerts" element={<Alerts />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
+
+          <Route path="/live-feed" element={<LiveFeed />} />
           <Route path="/bus-routes" element={<BusRoutes />} />
           <Route path="/blockchain-ticketing" element={<BlockchainTicketing />} />
           <Route path="/emergency-alerts" element={<EmergencyAlerts />} />

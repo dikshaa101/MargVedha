@@ -23,7 +23,7 @@ const Dashboard = () => {
                 <FaTrafficLight className="text-danger" /> Real-time Traffic Monitoring
               </Card.Title>
               <Card.Text>Live traffic updates using AI-based YOLOv8 vehicle detection.</Card.Text>
-              <Button variant="primary" onClick={() => navigate("/camera-feeds")}>
+              <Button variant="primary" onClick={() => navigate("/live-feed")}>
                 🔴 Live Feed
               </Button>
             </Card.Body>
