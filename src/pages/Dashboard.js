@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Card, Row, Col, Button } from "react-bootstrap";
-import { FaTrafficLight, FaBus, FaLock, FaExclamationTriangle, FaMoneyBill, FaCar } from "react-icons/fa";
+import { 
+  FaTrafficLight, FaBus, FaLock, 
+  FaExclamationTriangle, FaMoneyBill, FaCar 
+} from "react-icons/fa";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="p-4">
       <h2>📊 Dashboard - Traffic Monitoring System</h2>
@@ -17,11 +23,13 @@ const Dashboard = () => {
                 <FaTrafficLight className="text-danger" /> Real-time Traffic Monitoring
               </Card.Title>
               <Card.Text>Live traffic updates using AI-based YOLOv8 vehicle detection.</Card.Text>
-              <Button variant="primary">🔴 Live Feed</Button>
+              <Button variant="primary" onClick={() => navigate("/camera-feeds")}>
+                🔴 Live Feed
+              </Button>
             </Card.Body>
           </Card>
         </Col>
-
+        
         <Col md={6}>
           <Card className="shadow-lg border-0">
             <Card.Body>
@@ -29,7 +37,9 @@ const Dashboard = () => {
                 <FaBus className="text-success" /> Bus Route Optimization
               </Card.Title>
               <Card.Text>Dynamic route planning based on passenger demand & traffic.</Card.Text>
-              <Button variant="success">🗺️ View Routes</Button>
+              <Button variant="success" onClick={() => navigate("/bus-routes")}>
+                🗺️ View Routes
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -44,7 +54,9 @@ const Dashboard = () => {
                 <FaLock className="text-info" /> Blockchain Ticketing
               </Card.Title>
               <Card.Text>Secure & transparent ticketing system for public transport.</Card.Text>
-              <Button variant="info">💳 View Transactions</Button>
+              <Button variant="info" onClick={() => navigate("/blockchain-ticketing")}>
+                💳 View Transactions
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -56,7 +68,9 @@ const Dashboard = () => {
                 <FaExclamationTriangle className="text-danger" /> Emergency Response
               </Card.Title>
               <Card.Text>Integrates with emergency services for quick accident response.</Card.Text>
-              <Button variant="danger">🚑 Emergency Alerts</Button>
+              <Button variant="danger" onClick={() => navigate("/emergency-alerts")}>
+                🚑 Emergency Alerts
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -71,7 +85,9 @@ const Dashboard = () => {
                 <FaMoneyBill className="text-warning" /> Automatic Fare Adjustments
               </Card.Title>
               <Card.Text>Dynamic fare calculation for taxis & rickshaws based on traffic.</Card.Text>
-              <Button variant="warning">💵 View Fare Updates</Button>
+              <Button variant="warning" onClick={() => navigate("/fare-updates")}>
+                💵 View Fare Updates
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -83,7 +99,9 @@ const Dashboard = () => {
                 <FaCar className="text-primary" /> YOLOv8 Traffic Calculation
               </Card.Title>
               <Card.Text>Live vehicle count based on AI object detection.</Card.Text>
-              <Button variant="dark">🚗 View Traffic Data</Button>
+              <Button variant="dark" onClick={() => navigate("/traffic-data")}>
+                🚗 View Traffic Data
+              </Button>
             </Card.Body>
           </Card>
         </Col>
